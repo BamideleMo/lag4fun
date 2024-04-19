@@ -25,12 +25,12 @@ function Edit() {
     <>
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
-        <section class="pt-8">
+        <section class="pt-4">
           <h2 class="text-center roboto-bold">Edit My Profile</h2>
           <form class="my-4 w-80 mx-auto p-2 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <div class="text-gray-400">
-              Edit your profile to attract men who like what you like and are
-              looking for someone like you!
+              Attract men who like what you like and are looking for someone
+              like you using your profile!
             </div>
             <div>
               <TextInput

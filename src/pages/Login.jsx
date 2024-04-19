@@ -30,8 +30,8 @@ function Login() {
           <h2 class="text-center roboto-bold">Login</h2>
           <form class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <div class="text-gray-400">
-              Welcome. Login to edit or boost your profile to attract men who
-              like what you like and are looking for someone like you!
+              Login to edit or boost your profile to attract men who like what
+              you like and are looking for someone like you!
             </div>
             <div>
               <TextInput
@@ -51,6 +51,11 @@ function Login() {
                 passId="pass1"
                 formHandler={formHandler}
               />
+              <div class="text-right pt-2">
+                <A href="#" class="text-red-600 hover:opacity-60">
+                  Forgot Password
+                </A>
+              </div>
             </div>
             <div>
               <button class="bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60">

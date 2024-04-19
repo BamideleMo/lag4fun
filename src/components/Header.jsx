@@ -50,17 +50,45 @@ function Header() {
             </h2>
             <div class="p-4 space-y-5 flex flex-col">
               <A
-                href="/login"
+                href="/a/post"
                 class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
               >
-                <span>Log In</span>
+                <span>How to Use LagRuns</span>
+                <span class="text-2xl leading-none -mt-0.5">💰</span>
+              </A>
+              <A
+                href="/a/post"
+                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Get LagRuns Code</span>
+                <span class="text-2xl leading-none -mt-0.5">🍷</span>
+              </A>
+              <A
+                href="/a/post"
+                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Post My Profile</span>
                 <span class="text-2xl leading-none -mt-0.5">😍</span>
               </A>
               <A
-                href="/register"
+                href="/a/edit"
                 class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
               >
-                <span>Create Account</span>
+                <span>Edit My Profile</span>
+                <span class="text-2xl leading-none -mt-0.5">🥰</span>
+              </A>
+              <A
+                href="/a/boost"
+                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Boost My Profile</span>
+                <span class="text-2xl leading-none -mt-0.5">🚀</span>
+              </A>
+              <A
+                href="/a/remove"
+                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Remove My Profile</span>
                 <span class="text-2xl leading-none -mt-0.5">🥰</span>
               </A>
             </div>
