@@ -54,14 +54,14 @@ function Header() {
               <div class="space-y-2">
                 <A
                   href="/a/post"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>How to Use LagRuns</span>
                   <span class="text-2xl leading-none -mt-0.5">💰</span>
                 </A>
                 <A
                   href="/a/post"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Get LagRuns Code</span>
                   <span class="text-2xl leading-none -mt-0.5">🍷</span>
@@ -70,28 +70,28 @@ function Header() {
               <div class="space-y-2 border-t border-fuchsia-400 pt-4">
                 <A
                   href="/a/post"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Post My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">😍</span>
                 </A>
                 <A
                   href="/a/edit"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Edit My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">🥰</span>
                 </A>
                 <A
                   href="/a/boost"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Boost My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">🚀</span>
                 </A>
                 <A
                   href="/a/remove"
-                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Remove My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">🥰</span>

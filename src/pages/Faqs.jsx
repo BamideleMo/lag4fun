@@ -33,7 +33,7 @@ function Faqs() {
         <section class="pt-8 lg:w-6/12 mx-auto">
           <h2 class="text-center roboto-bold">FAQs</h2>
           <div class="mt-1 space-y-4">
-            <div class="bg-gray-50 p-4 rounded-lg">
+            <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg">
               <div
                 onClick={() => {
                   setFaq1(!faq1());
@@ -60,7 +60,7 @@ function Faqs() {
                 <div class="border-t border-blue-900 py-2 mt-2">y</div>
               </Show>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
+            <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg">
               <div
                 onClick={() => {
                   setFaq2(!faq2());
@@ -87,7 +87,7 @@ function Faqs() {
                 <div class="border-t border-blue-900 py-2 mt-2">x</div>
               </Show>
             </div>
-            <div class="bg-gray-50 p-4 rounded-lg">
+            <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg">
               <div
                 onClick={() => {
                   setFaq3(!faq3());
