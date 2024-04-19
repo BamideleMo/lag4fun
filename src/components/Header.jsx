@@ -8,6 +8,8 @@ import { z } from "zod";
 import TextArea from "../components/TextArea";
 import { Select } from "../components/Select";
 
+import logo from "../assets/lagruns.webp";
+
 const schema = z.object({
   username: z.string().length(11, "*Invalid"),
   nickname: z.string().min(2, "*Invalid"),
@@ -48,62 +50,62 @@ function Header() {
                 />
               </svg>
             </h2>
-            <div class="p-4 space-y-5 flex flex-col">
-              <A
-                href="/a/post"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>How to Use LagRuns</span>
-                <span class="text-2xl leading-none -mt-0.5">💰</span>
-              </A>
-              <A
-                href="/a/post"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Get LagRuns Code</span>
-                <span class="text-2xl leading-none -mt-0.5">🍷</span>
-              </A>
-              <A
-                href="/a/post"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Post My Profile</span>
-                <span class="text-2xl leading-none -mt-0.5">😍</span>
-              </A>
-              <A
-                href="/a/edit"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Edit My Profile</span>
-                <span class="text-2xl leading-none -mt-0.5">🥰</span>
-              </A>
-              <A
-                href="/a/boost"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Boost My Profile</span>
-                <span class="text-2xl leading-none -mt-0.5">🚀</span>
-              </A>
-              <A
-                href="/a/remove"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Remove My Profile</span>
-                <span class="text-2xl leading-none -mt-0.5">🥰</span>
-              </A>
+            <div class="p-4 space-y-4 flex flex-col">
+              <div class="space-y-2">
+                <A
+                  href="/a/post"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>How to Use LagRuns</span>
+                  <span class="text-2xl leading-none -mt-0.5">💰</span>
+                </A>
+                <A
+                  href="/a/post"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Get LagRuns Code</span>
+                  <span class="text-2xl leading-none -mt-0.5">🍷</span>
+                </A>
+              </div>
+              <div class="space-y-2 border-t border-fuchsia-400 pt-4">
+                <A
+                  href="/a/post"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Post My Profile</span>
+                  <span class="text-2xl leading-none -mt-0.5">😍</span>
+                </A>
+                <A
+                  href="/a/edit"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Edit My Profile</span>
+                  <span class="text-2xl leading-none -mt-0.5">🥰</span>
+                </A>
+                <A
+                  href="/a/boost"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Boost My Profile</span>
+                  <span class="text-2xl leading-none -mt-0.5">🚀</span>
+                </A>
+                <A
+                  href="/a/remove"
+                  class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Remove My Profile</span>
+                  <span class="text-2xl leading-none -mt-0.5">🥰</span>
+                </A>
+              </div>
             </div>
           </div>
         </div>
       </Show>
-      <header class="border-b flex justify-between pt-2 drop-shadow-lg">
-        <A
-          href="/"
-          class="text-3xl -mt-2.5 
-          w-12 h-12"
-        >
-          🍑
+      <header class="border-b flex justify-between pb-2">
+        <A href="/" class="text-3xl w-10">
+          <img src={logo} class="w-full inline -mt-2" />
         </A>
-        <div class="space-x-8 text-sm">
+        <div class="space-x-8 text-sm pt-2">
           <A href="/faqs">FAQs</A>
           <span
             onClick={() => {

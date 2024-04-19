@@ -81,7 +81,7 @@ function List(params) {
       </Show>
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
-        <section class="py-8  text-sm lg:text-lg">
+        <section class="py-8  text-sm lg:text-base">
           <div class="drop-shadow-lg lg:w-10/12 mx-auto space-y-4">
             <div class="flex justify-between space-x-4">
               <div class="text-gray-600 leading-tight lg:pt-1">
