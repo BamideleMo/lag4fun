@@ -43,7 +43,7 @@ function Post() {
                 name="username"
                 required={true}
                 type="text"
-                placeholder="e.g.: 09065431244"
+                placeholder="e.g.: 09065431290"
                 formHandler={formHandler}
               />
             </div>
