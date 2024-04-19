@@ -43,7 +43,7 @@ function GetCode() {
             </div>
             <div>
               <a
-                href="https://wa.me/2347036935026?text=I'm%20want%20my%20LagRuns%20Code"
+                href="https://wa.me/2347036935026?text=Hello,%20I%20want%20my%20LagRuns%20Code.%20Thanks."
                 class="block text-center bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
               >
                 Get LagRuns Code
