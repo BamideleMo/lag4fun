@@ -29,7 +29,7 @@ function Edit() {
           <h2 class="text-center roboto-bold">Edit My Profile</h2>
           <form class="my-4 w-80 mx-auto p-2 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <div class="text-gray-400">
-              Edit your profile to attract who likes what you like and are
+              Edit your profile to attract men who like what you like and are
               looking for someone like you!
             </div>
             <div>
