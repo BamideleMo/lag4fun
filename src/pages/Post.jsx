@@ -120,8 +120,8 @@ function Post() {
               />
               <div class="text-sm leading-tight pt-1 text-gray-500">
                 <a href="#" class="text-black bg-yellow-300 hover:opacity-60">
-                  No LagRuns code? <u>Click here</u> to send a WhatsApp chat to
-                  us & we'll generate & reply you with your code.
+                  No LagRuns code? <u>Click here</u> to see how to get your
+                  code.
                 </a>
               </div>
             </div>

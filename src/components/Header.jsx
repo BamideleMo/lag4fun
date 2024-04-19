@@ -94,7 +94,7 @@ function Header() {
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Remove My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">🥰</span>
+                  <span class="text-2xl leading-none -mt-0.5">💰</span>
                 </A>
               </div>
             </div>
