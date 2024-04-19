@@ -77,7 +77,7 @@ function Header() {
       <header class="border-b flex justify-between py-2 drop-shadow-lg">
         <A
           href="/"
-          class="text-4xl -mt-2.5 
+          class="text-3xl -mt-2.5 
           w-12 h-12"
         >
           🍑
