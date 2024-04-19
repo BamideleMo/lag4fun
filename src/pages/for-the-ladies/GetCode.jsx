@@ -43,7 +43,7 @@ function GetCode() {
             </div>
             <div>
               <a
-                href="https://web.whatsapp.com/send/?phone=2347036935026&text=Hello+LagRuns.+I+want+a+LagRuns+Code&type=phone_number&app_absent=0"
+                href="https://wa.me/2347036935026?text=I'm%20want%20my%20LagRuns%20Code"
                 class="block text-center bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
               >
                 Get LagRuns Code
