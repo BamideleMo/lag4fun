@@ -74,7 +74,7 @@ function Header() {
           </div>
         </div>
       </Show>
-      <header class="border-b flex justify-between py-2 drop-shadow-lg">
+      <header class="border-b flex justify-between pt-2 drop-shadow-lg">
         <A
           href="/"
           class="text-3xl -mt-2.5 
