@@ -122,7 +122,7 @@ function Faqs() {
                 }}
                 class="cursor-pointer hover:opacity-60 flex justify-between text-blue-900 roboto-bold"
               >
-                <div class="">Why no pictures of the ladies?</div>
+                <div class="">Why no Pictures of listed Ladies?</div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
