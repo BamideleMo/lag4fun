@@ -42,9 +42,12 @@ function Edit() {
               <p class="border-t border-yellow-600 pt-2">
                 <b>Note:</b>
                 <br />
-                You need a <b>LagRuns code</b> to edit your profile. Forgotten
-                yours?{" "}
-                <A href="#" class="underline hover:opacity-60">
+                You need your <b>LagRuns code</b> to edit your profile.
+                Forgotten yours?{" "}
+                <A
+                  href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LagRuns%20Code.%20Help%20me%20get%20it."
+                  class="underline hover:opacity-60"
+                >
                   Click here to get it
                 </A>
                 .

@@ -43,9 +43,12 @@ function Remove() {
                 <b>Note:</b>
                 <br />
                 Can't remember your <b>LagRuns code</b>?{" "}
-                <A href="#" class="underline hover:opacity-60">
+                <a
+                  href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LagRuns%20Code.%20Help%20me%20get%20it."
+                  class="underline hover:opacity-60"
+                >
                   Click here to get it
-                </A>
+                </a>
                 .
               </p>
             </div>
