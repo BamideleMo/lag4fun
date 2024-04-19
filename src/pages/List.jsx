@@ -114,7 +114,7 @@ function List(params) {
             </div>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-50"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">Becky</div>
@@ -144,7 +144,7 @@ function List(params) {
             </a>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-50"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">SilverBabe</div>
@@ -172,7 +172,7 @@ function List(params) {
             </a>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-50"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">Fatima</div>
