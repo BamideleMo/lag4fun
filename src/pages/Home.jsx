@@ -13,8 +13,10 @@ function Home() {
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
           leading-tight text-xl sm:text-4xl lg:text-4xl"
           >
-            A Curated List of Ladies Available{" "}
-            <span class="border-b-2 border-fuchsia-600">Just for Hookup</span>{" "}
+            A Curated List of Ladies{" "}
+            <span class="border-b-2 border-fuchsia-600">
+              Available for Hookup
+            </span>{" "}
             in Lagos.
           </h2>
         </section>

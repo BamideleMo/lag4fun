@@ -82,7 +82,7 @@ function Header() {
         >
           🍑
         </A>
-        <div class="space-x-8 text-sm pt-1">
+        <div class="space-x-8 text-sm">
           <A href="/faqs">FAQs</A>
           <span
             onClick={() => {
