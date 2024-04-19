@@ -3,7 +3,7 @@ import { A } from "@solidjs/router";
 function CardPlaces() {
   return (
     <section class="text-sm">
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 drop-shadow-lg">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 drop-shadow-lg">
         <A
           href="/l?w=apapa&c=all"
           class="flex justify-between roboto-bold border border-fuchsia-300 p-4 rounded-lg hover:opacity-60"

@@ -89,17 +89,20 @@ function List(params) {
                 Sorted by <b>Most Recent Profile</b>. Just click/tap to start
                 chatting on WhatsApp.
               </div>
-              <div class="w-12">
+              <div
+                onClick={() => {
+                  showFilter();
+                }}
+                class="w-12 hover:opacity-60 bg-fuchsia-100 border border-fuchsia-200 rounded-lg p-1"
+              >
+                <span class="block text-xs text-center">Filter</span>
                 <svg
-                  onClick={() => {
-                    showFilter();
-                  }}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="cursor-pointer w-12 h-12 text-red-600 hover:opacity-60 float-right -mr-1"
+                  className="cursor-pointer w-6 h-6 mx-auto"
                 >
                   <path
                     strokeLinecap="round"
@@ -111,7 +114,7 @@ function List(params) {
             </div>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-fuchsia-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">Becky</div>
@@ -122,12 +125,12 @@ function List(params) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-orange-400"
+                    className="w-6 h-6"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
                     />
                   </svg>
                 </div>
@@ -141,7 +144,7 @@ function List(params) {
             </a>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-fuchsia-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">SilverBabe</div>
@@ -152,12 +155,12 @@ function List(params) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-purple-600"
+                    className="w-6 h-6"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
                     />
                   </svg>
                 </div>
@@ -169,7 +172,7 @@ function List(params) {
             </a>
             <a
               href="#"
-              class="block p-2 border border-black rounded-lg bg-white hover:bg-fuchsia-100"
+              class="block p-2 border border-black rounded-lg bg-white hover:bg-blue-100"
             >
               <div class="flex justify-between">
                 <div class="roboto-bold text-blue-600">Fatima</div>
@@ -180,12 +183,12 @@ function List(params) {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 text-green-600"
+                    className="w-6 h-6"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                      d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
                     />
                   </svg>
                 </div>

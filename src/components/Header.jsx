@@ -29,7 +29,7 @@ function Header() {
         <div class="z-50 fixed bg-slate-900 bg-opacity-90 top-0 bottom-0 left-0 right-0 w-screen h-screen flex items-center">
           <div class="bg-white border shadow-lg w-64 mx-auto rounded-lg text-sm">
             <h2 class="flex justify-between p-4 border-b text-gray-400">
-              <span class="">For Ladies</span>
+              <span class="">For the Ladies</span>
               <svg
                 onClick={() => {
                   setForm(false);
@@ -77,7 +77,8 @@ function Header() {
       <header class="border-b flex justify-between py-2 drop-shadow-lg">
         <A
           href="/"
-          class="text-4xl -mt-2.5 border-2 border-fuchsia-600 rounded-full inline-block w-12 h-12 text-center pt-1"
+          class="text-4xl -mt-2.5 border-2 border-fuchsia-600 rounded-full inline-block 
+          w-12 h-12 text-center p-1"
         >
           🍑
         </A>

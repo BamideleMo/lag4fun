@@ -8,7 +8,7 @@ function Home() {
     <>
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
-        <section class="pt-12 mb-6">
+        <section class="pt-6 mb-6">
           <h2
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
           leading-tight text-xl sm:text-4xl lg:text-4xl"
