@@ -44,7 +44,7 @@ function GetCode() {
             <div>
               <a
                 href="https://web.whatsapp.com/send/?phone=2347036935026&text=Hello+LagRuns.+I+want+a+LagRuns+Code&type=phone_number&app_absent=0"
-                class="block bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
+                class="block text-center bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
               >
                 Get LagRuns Code
               </a>
