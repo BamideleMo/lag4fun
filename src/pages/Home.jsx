@@ -11,9 +11,9 @@ function Home() {
         <section class="pt-6 mb-6">
           <h2
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
-          leading-tight text-xl sm:text-4xl lg:text-4xl"
+          leading-tight text-2xl sm:text-4xl lg:text-4xl"
           >
-            A Curated List of Ladies{" "}
+            A Simple List of Ladies{" "}
             <span class="border-b-2 border-fuchsia-600">
               Available for Hookup
             </span>{" "}
