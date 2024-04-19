@@ -50,25 +50,18 @@ function Header() {
             </h2>
             <div class="p-4 space-y-5 flex flex-col">
               <A
-                href="/a/post"
+                href="/login"
                 class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
               >
-                <span>Post My Profile</span>
+                <span>Log In</span>
                 <span class="text-2xl leading-none -mt-0.5">😍</span>
               </A>
               <A
-                href="/a/edit"
+                href="/register"
                 class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
               >
-                <span>Edit My Profile</span>
+                <span>Create Account</span>
                 <span class="text-2xl leading-none -mt-0.5">🥰</span>
-              </A>
-              <A
-                href="/a/remove"
-                class="flex border p-3 bg-gray-50 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Remove My Profile</span>
-                <span class="text-2xl leading-none -mt-0.5">😡</span>
               </A>
             </div>
           </div>

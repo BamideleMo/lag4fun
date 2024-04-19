@@ -11,6 +11,8 @@ import Edit from "./pages/Edit";
 import List from "./pages/List";
 import CreateGetCode from "./pages/admin/CreateGetCode";
 import Faqs from "./pages/Faqs";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const root = document.getElementById("root");
 
@@ -38,6 +40,8 @@ render(
       <Route path="/a/edit" component={Edit} />
       <Route path="/l" component={List} />
       <Route path="/faqs" component={Faqs} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
     </Router>
   ),
   root

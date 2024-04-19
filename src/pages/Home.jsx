@@ -13,11 +13,11 @@ function Home() {
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
           leading-tight text-2xl sm:text-4xl lg:text-4xl"
           >
-            A Simple List of Ladies{" "}
+            A Simple List of Ladies in Lagos{" "}
             <span class="border-b-2 border-fuchsia-600">
               Available for Hookup
-            </span>{" "}
-            in Lagos.
+            </span>
+            .
           </h2>
         </section>
         <CardPlaces />
