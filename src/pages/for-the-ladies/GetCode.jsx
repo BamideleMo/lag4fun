@@ -32,7 +32,7 @@ function GetCode() {
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
         <section class="pt-4">
-          <h2 class="text-center roboto-bold">Get My LagRuns Code</h2>
+          <h2 class="text-center roboto-bold">Get LagRuns Code</h2>
           <form class="my-4 w-80 mx-auto p-2 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <div class="bg-yellow-100 border border-yellow-200 p-3 rounded-lg leading-tight space-y-2">
               <p>
@@ -43,10 +43,10 @@ function GetCode() {
             </div>
             <div>
               <a
-                href="https://wa.me/2347036935026?text=Hello,%20I%20want%20my%20LagRuns%20Code.%20Thanks."
+                href="https://wa.me/2347036935026?text=Hi,%20I%20want%20my%20LagRuns%20Code.%20Thanks."
                 class="block text-center bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
               >
-                Get LagRuns Code
+                Get it now
               </a>
             </div>
           </form>

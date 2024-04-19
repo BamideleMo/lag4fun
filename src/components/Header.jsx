@@ -56,8 +56,8 @@ function Header() {
                   href="/a/get-code"
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
-                  <span>Get My LagRuns Code</span>
-                  <span class="text-2xl leading-none -mt-0.5">🍷</span>
+                  <span>Get LagRuns Code</span>
+                  <span class="text-2xl leading-none -mt-0.5">🔑</span>
                 </A>
               </div>
               <div class="space-y-2 border-y border-fuchsia-400 py-4">
