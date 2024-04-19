@@ -53,21 +53,14 @@ function Header() {
             <div class="p-4 space-y-4 flex flex-col">
               <div class="space-y-2">
                 <A
-                  href="/a/post"
+                  href="/a/get-code"
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
-                  <span>How to Use LagRuns</span>
-                  <span class="text-2xl leading-none -mt-0.5">💰</span>
-                </A>
-                <A
-                  href="/a/post"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Get LagRuns Code</span>
+                  <span>Get My LagRuns Code</span>
                   <span class="text-2xl leading-none -mt-0.5">🍷</span>
                 </A>
               </div>
-              <div class="space-y-2 border-t border-fuchsia-400 pt-4">
+              <div class="space-y-2 border-y border-fuchsia-400 py-4">
                 <A
                   href="/a/post"
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
@@ -83,18 +76,20 @@ function Header() {
                   <span class="text-2xl leading-none -mt-0.5">🥰</span>
                 </A>
                 <A
+                  href="/a/remove"
+                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
+                >
+                  <span>Remove My Profile</span>
+                  <span class="text-2xl leading-none -mt-0.5">😡</span>
+                </A>
+              </div>
+              <div>
+                <A
                   href="/a/boost"
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
                 >
                   <span>Boost My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">🚀</span>
-                </A>
-                <A
-                  href="/a/remove"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Remove My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">💰</span>
                 </A>
               </div>
             </div>

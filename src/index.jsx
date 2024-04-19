@@ -4,15 +4,15 @@ import { Router, Route } from "@solidjs/router";
 
 import "./index.css";
 import Home from "./pages/Home";
-import Post from "./pages/Post";
+import Post from "./pages/for-the-ladies/Post";
 import AdminPost from "./pages/admin/Post";
-import Remove from "./pages/Remove";
-import Edit from "./pages/Edit";
+import Remove from "./pages/for-the-ladies/Remove";
+import Edit from "./pages/for-the-ladies/Edit";
 import List from "./pages/List";
 import CreateGetCode from "./pages/admin/CreateGetCode";
 import Faqs from "./pages/Faqs";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import HowTo from "./pages/for-the-ladies/HowTo";
+import GetCode from "./pages/for-the-ladies/GetCode";
 
 const root = document.getElementById("root");
 
@@ -40,8 +40,8 @@ render(
       <Route path="/a/edit" component={Edit} />
       <Route path="/l" component={List} />
       <Route path="/faqs" component={Faqs} />
-      <Route path="/login" component={Login} />
-      <Route path="/register" component={Register} />
+      <Route path="/a/how-to" component={HowTo} />
+      <Route path="/a/get-code" component={GetCode} />
     </Router>
   ),
   root

@@ -1,13 +1,14 @@
 import { A } from "@solidjs/router";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import TextInput from "../components/TextInput";
+import { MetaProvider, Title, Meta } from "@solidjs/meta";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import TextInput from "../../components/TextInput";
 
 import { useFormHandler } from "solid-form-handler";
 import { zodSchema } from "solid-form-handler/zod";
 import { z } from "zod";
-import TextArea from "../components/TextArea";
-import { Select } from "../components/Select";
+import TextArea from "../../components/TextArea";
+import { Select } from "../../components/Select";
 
 const schema = z.object({
   username: z.string().length(11, "*Invalid"),
@@ -27,15 +28,38 @@ function Post() {
     const now = new Date();
   };
   return (
-    <>
+    <MetaProvider>
+      <Title>Post My Profile - LagRuns</Title>
+      <Meta
+        name="description"
+        content="Post your profile to LagRuns so men can easily contact you for hookup."
+      />
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
         <section class="pt-4">
           <h2 class="text-center roboto-bold">Post My Profile</h2>
           <form class="my-4 w-80 sm:w-/5 mx-auto p-2 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
-            <div class="text-gray-400">
-              Post your profile to LagRuns so you can be easily contacted for
-              hookup.
+            <div class="bg-yellow-100 border border-yellow-200 p-3 rounded-lg leading-tight space-y-2">
+              <p>
+                Post your profile to LagRuns so men can easily contact you for
+                hookup.
+              </p>
+              <p class="border-y border-yellow-600 py-2">
+                To see examples of some sexy & catchy profiles,{" "}
+                <A href="#" class="underline hover:opacity-60">
+                  click here
+                </A>
+                .
+              </p>
+              <p>
+                <b>Note:</b>
+                <br />
+                You need a <b>LagRuns code</b> before you can post your profile.{" "}
+                <A href="#" class="underline hover:opacity-60">
+                  Get yours here for FREE
+                </A>
+                .
+              </p>
             </div>
             <div>
               <TextInput
@@ -103,27 +127,15 @@ function Post() {
                 placeholder="Write something catchy..."
                 formHandler={formHandler}
               />
-              <div class="text-sm leading-tight pt-1">
-                <A href="#" class="text-black bg-yellow-300 hover:opacity-60">
-                  To see some examples of sexy & catchy profiles{" "}
-                  <u>click here</u>.
-                </A>
-              </div>
             </div>
             <div>
               <TextInput
-                label="Your LagRuns Code:"
+                label="LagRuns Code:"
                 name="code"
                 required={true}
                 type="text"
                 formHandler={formHandler}
               />
-              <div class="text-sm leading-tight pt-1 text-gray-500">
-                <a href="#" class="text-black bg-yellow-300 hover:opacity-60">
-                  No LagRuns code? <u>Click here</u> to see how to get your
-                  code.
-                </a>
-              </div>
             </div>
             <div>
               <button class="bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60">
@@ -134,7 +146,7 @@ function Post() {
         </section>
       </div>
       <Footer />
-    </>
+    </MetaProvider>
   );
 }
 
