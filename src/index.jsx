@@ -13,6 +13,7 @@ import CreateGetCode from "./pages/admin/CreateGetCode";
 import Faqs from "./pages/Faqs";
 import HowTo from "./pages/for-the-ladies/HowTo";
 import GetCode from "./pages/for-the-ladies/GetCode";
+import Login from "./pages/for-the-ladies/Login";
 
 const root = document.getElementById("root");
 
@@ -42,6 +43,7 @@ render(
       <Route path="/faqs" component={Faqs} />
       <Route path="/a/how-to" component={HowTo} />
       <Route path="/a/get-code" component={GetCode} />
+      <Route path="/a/login" component={Login} />
     </Router>
   ),
   root

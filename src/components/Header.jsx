@@ -51,16 +51,23 @@ function Header() {
               </svg>
             </h2>
             <div class="p-4 space-y-4 flex flex-col">
-              <div class="space-y-2">
-                <A
-                  href="/a/get-code"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Get LagRuns Code</span>
-                  <span class="text-2xl leading-none -mt-0.5">🔑</span>
-                </A>
-              </div>
-              <div class="space-y-2 border-y border-fuchsia-400 py-4">
+              {/* <div class="space-y-2"> */}
+              <A
+                href="/a/get-code"
+                class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Get LagRuns Code</span>
+                <span class="text-2xl leading-none -mt-0.5">🔑</span>
+              </A>
+              <A
+                href="/a/login"
+                class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Log In</span>
+                <span class="text-2xl leading-none -mt-0.5">😍</span>
+              </A>
+              {/* </div> */}
+              {/* <div class="space-y-2 border-y border-fuchsia-400 py-4">
                 <A
                   href="/a/post"
                   class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
@@ -91,7 +98,7 @@ function Header() {
                   <span>Boost My Profile</span>
                   <span class="text-2xl leading-none -mt-0.5">🚀</span>
                 </A>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

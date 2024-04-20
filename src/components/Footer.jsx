@@ -10,14 +10,14 @@ function Footer() {
   return (
     <footer class="mt-20 text-sm text-center border-t border-fuchsia-400 py-12 space-y-3">
       <div class="space-x-3">
-        <A href="#" class="text-gray-600 hover:opacity-60">
+        {/* <A href="#" class="text-gray-600 hover:opacity-60">
           Advertise
         </A>
         <span>-</span>
         <A href="#" class="text-gray-600 hover:opacity-60">
           Report a Profile
         </A>
-        <span>-</span>
+        <span>-</span> */}
         <A href="#" class="text-gray-600 hover:opacity-60">
           Ts & Cs
         </A>

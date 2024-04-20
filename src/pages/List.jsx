@@ -81,8 +81,7 @@ function List(params) {
       </Show>
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
-        <section class="py-8  text-sm lg:text-base">
-          <div class="drop-shadow-lg lg:w-10/12 mx-auto space-y-4">
+        <section class="pt-8  sm:w-7/12 lg:w-6/12 text-sm lg:text-base drop-shadow-lg mx-auto space-y-4">
             <div class="flex justify-between space-x-4">
               <div class="text-gray-600 leading-tight lg:pt-1">
                 Showing ladies in <b class="capitalize">{searchParams.w}</b>{" "}
@@ -102,7 +101,7 @@ function List(params) {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="cursor-pointer w-6 h-6 mx-auto"
+                  className="cursor-pointer w-4 h-4 mx-auto"
                 >
                   <path
                     strokeLinecap="round"
@@ -198,7 +197,6 @@ function List(params) {
                 I'm here for serious hookup.
               </div>
             </a>
-          </div>
         </section>
       </div>
       <Footer />

@@ -44,32 +44,13 @@ function Post() {
                 Post your profile to LagRuns so men can easily contact you for
                 hookup.
               </p>
-              <p class="border-y border-yellow-600 py-2">
+              <p class="border-t border-yellow-600 py-2">
                 To see examples of some sexy & catchy profiles,{" "}
                 <A href="#" class="underline hover:opacity-60">
                   click here
                 </A>
                 .
               </p>
-              <p>
-                <b>Note:</b>
-                <br />
-                You need a <b>LagRuns code</b> before you can post your profile.{" "}
-                <A href="#" class="underline hover:opacity-60">
-                  Get yours here for FREE
-                </A>
-                .
-              </p>
-            </div>
-            <div>
-              <TextInput
-                label="WhatsApp Number:"
-                name="username"
-                required={true}
-                type="text"
-                placeholder="e.g.: 09065431290"
-                formHandler={formHandler}
-              />
             </div>
             <div class="grid grid-cols-2 gap-2">
               <div>
@@ -125,15 +106,6 @@ function Post() {
                 type="text"
                 max="200"
                 placeholder="Write something catchy..."
-                formHandler={formHandler}
-              />
-            </div>
-            <div>
-              <TextInput
-                label="LagRuns Code:"
-                name="code"
-                required={true}
-                type="text"
                 formHandler={formHandler}
               />
             </div>

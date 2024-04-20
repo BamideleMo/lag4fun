@@ -36,8 +36,9 @@ function GetCode() {
           <form class="my-4 w-80 mx-auto p-2 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <div class="bg-yellow-100 border border-yellow-200 p-3 rounded-lg leading-tight space-y-2">
               <p>
-                For the sake of safety and secrecy, you need a{" "}
-                <b>LagRuns Code</b> to do anything on this platform.
+                For sake of safety, secrecy and validation, you need a{" "}
+                <b>LagRuns Code</b> to log in, post profile and do other things
+                on this platform.
               </p>
               <p>To get yours, click on the button below.</p>
             </div>
