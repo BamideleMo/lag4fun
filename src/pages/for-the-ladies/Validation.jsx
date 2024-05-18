@@ -9,11 +9,16 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function Validation() {
   const navigate = useNavigate();
+  const [phone, setPhone] = createSignal();
+
   createEffect(() => {
     if (!localStorage.getItem("LekkiRunsUser")) {
       navigate("/a/login", { replace: true });
+    } else {
+      setPhone(JSON.parse(localStorage.getItem("LekkiRunsUser")).username);
     }
   });
+
   return (
     <MetaProvider>
       <Title>Validation - LekkiRuns.ng</Title>
@@ -30,10 +35,7 @@ function Validation() {
           <div class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <p>
               You'll receive a <b>validation link</b> in your WhatsApp:{" "}
-              <b>
-                {JSON.parse(localStorage.getItem("LekkiRunsUser")).username}
-              </b>
-              .
+              <b>{phone}</b>.
             </p>
             <p>
               If you've gotten the link please go and click on it for

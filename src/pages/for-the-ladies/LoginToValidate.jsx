@@ -25,9 +25,12 @@ function LoginToValidate() {
           <h2 class="text-center roboto-bold">Login to Validate</h2>
           <div class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <p>
-              First of all log in then go & click on the WhatsApp link for
-              validation.
+              <b>Please follow these 2 steps:</b>
             </p>
+            <ol class="mx-5 list-decimal space-y-2">
+              <li>Log in.</li>
+              <li>Open your WhatsApp & click on the validation link.</li>
+            </ol>
             <p>
               <A
                 href="/a/login"
