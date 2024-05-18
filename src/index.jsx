@@ -22,6 +22,7 @@ import Report from "./pages/Report";
 import Terms from "./pages/Terms";
 import Safety from "./pages/Safety";
 import Privacy from "./pages/Privacy";
+import Advertise from "./pages/for-the-ladies/Advertise";
 
 const root = document.getElementById("root");
 
@@ -56,6 +57,7 @@ render(
       <Route path="/a/success" component={Success} />
       <Route path="/a/profile" component={Profile} />
       <Route path="/a/tips" component={Tips} />
+      <Route path="/a/advertise" component={Advertise} />
       <Route path="/report" component={Report} />
       <Route path="/terms" component={Terms} />
       <Route path="/safety" component={Safety} />

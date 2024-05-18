@@ -260,8 +260,8 @@ function Home() {
                         {(lady, i) => (
                           <a
                             href={
-                              "https://wa.me/" +
-                              lady.username +
+                              "https://wa.me/+234" +
+                              lady.username.substring(1) +
                               "?text=Hi%20" +
                               lady.nickname +
                               ".%20Found%20your%20contact%20on%20LekkiRuns.com"
