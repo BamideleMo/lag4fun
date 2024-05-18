@@ -85,7 +85,7 @@ function Post() {
               <p>
                 Make sure your Sexy Bio is catchy & sexy enough to attract your
                 kind of men. You can include your charges & other info that's
-                important too.
+                important. Use emojis to spice it up! 🌶️😋
               </p>
             </div>
             <div class="grid grid-cols-2 gap-2">

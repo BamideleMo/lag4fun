@@ -84,7 +84,10 @@ function Home() {
   return (
     <>
       <Show when={filter()}>
-        <div class="z-50 fixed bg-slate-900 bg-opacity-90 top-0 bottom-0 left-0 right-0 w-screen h-screen flex items-center">
+        <div
+          id="top"
+          class="z-50 fixed bg-slate-900 bg-opacity-90 top-0 bottom-0 left-0 right-0 w-screen h-screen flex items-center"
+        >
           <div class="bg-white border shadow-lg w-64 mx-auto rounded-lg text-sm">
             <h2 class="flex justify-between py-2 px-4 border-b text-gray-400">
               <span>Filter List</span>
@@ -205,6 +208,14 @@ function Home() {
             .
           </h2>
         </section>
+
+        <a
+          href="#top"
+          class="bottom-4 right-4 opacity-60 fixed z-50 bg-black p-3 text-xs text-center text-white font-semibold"
+        >
+          <p>&uarr;</p>
+          <p>Go to Top</p>
+        </a>
         <div class="pt-8 text-sm lg:text-base drop-shadow-lg mx-auto space-y-4">
           <Show
             fallback={
