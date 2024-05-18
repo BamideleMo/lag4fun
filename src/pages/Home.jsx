@@ -1,4 +1,3 @@
-import CardPlaces from "../components/CardPlaces";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { createSignal } from "solid-js";

@@ -43,11 +43,11 @@ function Footer() {
               </>
             </Show>
           </Show>
-          <A href="#" class="text-gray-600 hover:opacity-60">
+          <A href="/terms" class="text-gray-600 hover:opacity-60">
             Terms & Conditions
           </A>{" "}
           <span>-</span>
-          <A href="#" class="text-gray-600 hover:opacity-60">
+          <A href="/safety" class="text-gray-600 hover:opacity-60">
             Safety Concerns
           </A>
         </div>

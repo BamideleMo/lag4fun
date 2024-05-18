@@ -19,6 +19,7 @@ import Tips from "./pages/for-the-ladies/Tips";
 import LoginToValidate from "./pages/for-the-ladies/LoginToValidate";
 import Validated from "./pages/for-the-ladies/Validated";
 import Report from "./pages/Report";
+import Terms from "./pages/Terms";
 
 const root = document.getElementById("root");
 
@@ -54,6 +55,7 @@ render(
       <Route path="/a/profile" component={Profile} />
       <Route path="/a/tips" component={Tips} />
       <Route path="/report" component={Report} />
+      <Route path="/terms" component={Terms} />
     </Router>
   ),
   root
