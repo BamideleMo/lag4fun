@@ -13,7 +13,6 @@ import { createSignal } from "solid-js";
 const schema = z.object({
   username: z.string().length(11, "*Invalid"),
   nickname: z.string().min(2, "*Invalid"),
-  location: z.string().min(1, "*Invalid"),
   build: z.string().min(1, "*Invalid"),
   orientation: z.string().min(1, "*Invalid"),
   bio: z.string().min(1, "*Invalid").max(600, "*Invalid"),
@@ -54,7 +53,7 @@ function Post() {
           status: "completed",
           username: formData().username,
           nickname: formData().nickname,
-          location: formData().location,
+          location: "Lekki",
           build: formData().build,
           orientation: formData().orientation,
           bio: formatted_bio,
@@ -92,52 +91,15 @@ function Post() {
                 formHandler={formHandler}
               />
             </div>
-            <div class="grid grid-cols-2 gap-2">
-              <div>
-                <TextInput
-                  label="Nickname:"
-                  name="nickname"
-                  required={true}
-                  type="text"
-                  placeholder="e.g.: SexyKitty"
-                  formHandler={formHandler}
-                />
-              </div>
-              <div>
-                <Select
-                  label="Location:"
-                  name="location"
-                  required={true}
-                  options={[
-                    { value: " ", label: "Select" },
-                    { value: "Lekki-Ajah", label: "Lekki-Ajah" },
-                    { value: "Alimosho", label: "Alimosho" },
-                    { value: "Apapa", label: "Apapa" },
-                    { value: "Badagry", label: "Badagry" },
-                    { value: "Epe", label: "Epe" },
-                    { value: "Etiosa", label: "Etiosa" },
-                    { value: "Festac", label: "Festac" },
-                    { value: "Gbagada", label: "Gbagada" },
-                    { value: "Ibeju", label: "Ibeju" },
-                    { value: "Iganmu", label: "Iganmu" },
-                    { value: "Ikeja", label: "Ikeja" },
-                    { value: "Ikorodu", label: "Ikorodu" },
-                    { value: "Ikoyi", label: "Ikoyi" },
-                    { value: "Island", label: "Island" },
-                    { value: "Lekki", label: "Lekki" },
-                    { value: "Magodo", label: "Magodo" },
-                    { value: "Mainland", label: "Mainland" },
-                    { value: "Ogudu", label: "Ogudu" },
-                    { value: "Ojo", label: "Ojo" },
-                    { value: "Oshodi-Isolo", label: "Oshodi-Isolo" },
-                    { value: "Sangotedo", label: "Sangotedo" },
-                    { value: "Surulere", label: "Surulere" },
-                    { value: "VI", label: "VI" },
-                    { value: "Yaba", label: "Yaba" },
-                  ]}
-                  formHandler={formHandler}
-                />
-              </div>
+            <div>
+              <TextInput
+                label="Nickname:"
+                name="nickname"
+                required={true}
+                type="text"
+                placeholder="e.g.: SexyKitty"
+                formHandler={formHandler}
+              />
             </div>
 
             <div class="grid grid-cols-2 gap-2">

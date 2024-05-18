@@ -134,6 +134,16 @@ function Register() {
               </div>
             </Show>
             <div>
+              <div class="leading-tight text-xs mb-2">
+                Clicking on the button below means you agree to our{" "}
+                <A
+                  href="/terms"
+                  class="text-red-600 hover:opacity-60 font-semibold"
+                >
+                  terms & conditions
+                </A>
+                .
+              </div>
               <Show
                 when={formHandler.isFormInvalid()}
                 fallback={
@@ -169,7 +179,10 @@ function Register() {
             </div>
             <div class="text-center">
               Account already exist? <br />
-              <A href="/a/login" class="text-fuchsia-600 hover:opacity-60">
+              <A
+                href="/a/login"
+                class="text-red-600 font-semibold hover:opacity-60"
+              >
                 Click here
               </A>{" "}
               to log in.

@@ -105,7 +105,7 @@ function Login() {
                 <a
                   href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LekkiRuns%20Code.%20Help%20me%20get%20it."
                   target="_blank"
-                  class="text-fuchsia-600 hover:opacity-60"
+                  class="text-red-600 font-semibold hover:opacity-60"
                 >
                   Click here
                 </a>
@@ -155,7 +155,10 @@ function Login() {
             </div>
             <div class="text-center">
               Don't have an account yet? <br />
-              <A href="/a/register" class="text-fuchsia-600 hover:opacity-60">
+              <A
+                href="/a/register"
+                class="text-red-600 font-semibold hover:opacity-60"
+              >
                 Click here
               </A>{" "}
               to create it.

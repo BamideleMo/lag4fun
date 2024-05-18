@@ -20,6 +20,8 @@ import LoginToValidate from "./pages/for-the-ladies/LoginToValidate";
 import Validated from "./pages/for-the-ladies/Validated";
 import Report from "./pages/Report";
 import Terms from "./pages/Terms";
+import Safety from "./pages/Safety";
+import Privacy from "./pages/Privacy";
 
 const root = document.getElementById("root");
 
@@ -56,6 +58,8 @@ render(
       <Route path="/a/tips" component={Tips} />
       <Route path="/report" component={Report} />
       <Route path="/terms" component={Terms} />
+      <Route path="/safety" component={Safety} />
+      <Route path="/privacy" component={Privacy} />
     </Router>
   ),
   root

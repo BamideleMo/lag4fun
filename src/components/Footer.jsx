@@ -18,7 +18,7 @@ function Footer() {
         </div>
       </Show>
       <div class="space-y-3">
-        <div class="space-x-3">
+        <div class="space-x-2">
           <Show when={localStorage.getItem("LekkiRunsUser")}>
             <span
               onClick={() => {
@@ -48,8 +48,13 @@ function Footer() {
           </A>{" "}
           <span>-</span>
           <A href="/safety" class="text-gray-600 hover:opacity-60">
-            Safety Concerns
+            Safety
           </A>
+          {/* {" "}
+          <span>-</span>
+          <A href="/privacy" class="text-gray-600 hover:opacity-60">
+            Privacy Notice
+          </A> */}
         </div>
         <div>&copy; 2024. All rights reserved.</div>
       </div>
