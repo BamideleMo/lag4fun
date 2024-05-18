@@ -16,6 +16,9 @@ import ValidationLink from "./pages/for-the-ladies/ValidationLink";
 import Success from "./pages/for-the-ladies/Success";
 import Profile from "./pages/for-the-ladies/Profile";
 import Tips from "./pages/for-the-ladies/Tips";
+import LoginToValidate from "./pages/for-the-ladies/LoginToValidate";
+import Validated from "./pages/for-the-ladies/Validated";
+import Report from "./pages/Report";
 
 const root = document.getElementById("root");
 
@@ -45,9 +48,12 @@ render(
       <Route path="/a/created" component={Created} />
       <Route path="/a/validation" component={Validation} />
       <Route path="/a/validation/link" component={ValidationLink} />
+      <Route path="/a/login-to-validate" component={LoginToValidate} />
+      <Route path="/a/validated" component={Validated} />
       <Route path="/a/success" component={Success} />
       <Route path="/a/profile" component={Profile} />
       <Route path="/a/tips" component={Tips} />
+      <Route path="/report" component={Report} />
     </Router>
   ),
   root

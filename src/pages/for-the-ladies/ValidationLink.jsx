@@ -13,7 +13,7 @@ function ValidationLink() {
   const navigate = useNavigate();
   createEffect(() => {
     if (!localStorage.getItem("LekkiRunsUser")) {
-      navigate("/a/login", { replace: true });
+      navigate("/a/login-to-validate", { replace: true });
     } else {
       patchProfile();
     }
@@ -43,7 +43,7 @@ function ValidationLink() {
       );
       const result = await response.json();
       if (result.success) {
-        navigate("/a/profile", { replace: true });
+        navigate("/a/validated", { replace: true });
       }
     } catch (error) {
       console.error(error);

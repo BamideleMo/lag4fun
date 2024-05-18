@@ -11,7 +11,6 @@ import TextArea from "../../components/TextArea";
 import { Select } from "../../components/Select";
 
 const schema = z.object({
-  location: z.string().min(1, "*Invalid"),
   bio: z.string().min(1, "*Invalid").max(600, "*Invalid"),
   build: z.string().min(1, "*Invalid"),
   orientation: z.string().min(1, "*Invalid"),
@@ -51,7 +50,7 @@ function Post() {
           method: "PATCH",
           body: JSON.stringify({
             status: "completed",
-            location: formData().location,
+            location: "Lekki",
             build: formData().build,
             orientation: formData().orientation,
             bio: formatted_bio,
@@ -84,50 +83,10 @@ function Post() {
           >
             <div class="bg-yellow-100 border border-yellow-200 p-3 rounded-lg leading-tight space-y-2">
               <p>
-                Post your profile to LekkiRuns so men can easily contact you for
-                hookup.
+                Make sure your Sexy Bio is catchy & sexy enough to attract your
+                kind of men. You can include your charges & other info that's
+                important too.
               </p>
-              <p class="border-t border-yellow-600 py-2">
-                To see examples of some sexy & catchy profiles,{" "}
-                <A href="#" class="underline hover:opacity-60">
-                  click here
-                </A>
-                .
-              </p>
-            </div>
-            <div>
-              <Select
-                label="Location:"
-                name="location"
-                required={true}
-                options={[
-                  { value: "", label: "Select" },
-                  { value: "Lekki-Ajah", label: "Lekki-Ajah" },
-                  { value: "Alimosho", label: "Alimosho" },
-                  { value: "Apapa", label: "Apapa" },
-                  { value: "Badagri", label: "Badagri" },
-                  { value: "Epe", label: "Epe" },
-                  { value: "Etiosa", label: "Etiosa" },
-                  { value: "Festac", label: "Festac" },
-                  { value: "Gbagada", label: "Gbagada" },
-                  { value: "Ibeju", label: "Ibeju" },
-                  { value: "Iganmu", label: "Iganmu" },
-                  { value: "Ikeja", label: "Ikeja" },
-                  { value: "Ikorodu", label: "Ikorodu" },
-                  { value: "Ikoyi", label: "Ikoyi" },
-                  { value: "Island", label: "Island" },
-                  { value: "Lekki", label: "Lekki" },
-                  { value: "Mainland", label: "Mainland" },
-                  { value: "Ogudu", label: "Ogudu" },
-                  { value: "Ojo", label: "Ojo" },
-                  { value: "Oshodi-Isolo", label: "Oshodi-Isolo" },
-                  { value: "Surulere", label: "Surulere" },
-                  { value: "VI", label: "VI" },
-                  { value: "Yaba", label: "Yaba" },
-                  { value: "Others", label: "Others..." },
-                ]}
-                formHandler={formHandler}
-              />
             </div>
             <div class="grid grid-cols-2 gap-2">
               <div>

@@ -8,7 +8,7 @@ import { z } from "zod";
 import TextArea from "../components/TextArea";
 import { Select } from "../components/Select";
 
-import logo from "../assets/lagruns.webp";
+import logo from "../assets/lekkiruns.webp";
 
 const schema = z.object({
   username: z.string().length(11, "*Invalid"),
@@ -74,7 +74,7 @@ function Header() {
         </A>
         <div class="space-x-8 text-sm pt-2 drop-shadow-lg">
           <Show
-            when={localStorage.getItem("lagRunsUser")}
+            when={localStorage.getItem("LekkiRunsUser")}
             fallback={
               <>
                 <A href="/faqs">FAQs</A>

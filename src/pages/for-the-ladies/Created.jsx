@@ -20,15 +20,14 @@ function Created() {
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
         <section class="pt-8">
-          <h2 class="text-center roboto-bold">Created</h2>
+          <h2 class="text-center roboto-bold">Account Created</h2>
           <div class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <p>Your account was successfully created. </p>
             <p>
-              Please{" "}
               <A href="/a/login" class="text-red-600 hover:underline">
-                Log In
+                Click HERE to Log In
               </A>{" "}
-              now and complete your profile.
+              now to see/complete your profile.
             </p>
           </div>
         </section>

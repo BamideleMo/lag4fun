@@ -190,7 +190,7 @@ function Home() {
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
           leading-tight text-2xl sm:text-4xl lg:text-4xl"
           >
-            A Simple List of Ladies in Lekki-Ajah{" "}
+            A Simple List of Ladies in <span class="border-b-2 border-blue-600">Lekki</span>{" "}
             <span class="border-b-2 border-fuchsia-600">
               Available to Mingle
             </span>
@@ -230,12 +230,14 @@ function Home() {
               <b class="capitalize">
                 {countLadies()} {orientation() === "all" ? "" : orientation()}
               </b>{" "}
-              <b class="capitalize">{build() === "any" ? "" : build()}</b>{" "}
+              <b class="capitalize">
+                {build() === "any" ? "" : "& " + build()}
+              </b>{" "}
               {orientation() !== "all" && countLadies() === 1
                 ? "Lady"
                 : "Ladies"}{" "}
-              in <b class="capitalize">Lekki-Ajah</b>. Just tap on profile for
-              direct WhatsApp chat.
+              in <b class="capitalize">Lekki</b>. Just tap on profile for direct
+              WhatsApp chat.
             </div>
           </div>
           <Show

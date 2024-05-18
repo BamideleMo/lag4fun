@@ -4,22 +4,22 @@ function Footer() {
   const navigate = useNavigate();
 
   const logOut = () => {
-    localStorage.removeItem("lagRunsUser");
+    localStorage.removeItem("LekkiRunsUser");
     navigate("/a/login", { replace: true });
   };
   return (
-    <footer class="mt-10 text-xs text-center border-t border-fuchsia-400 py-6 space-y-6">
-      <Show when={localStorage.getItem("lagRunsUser")}>
-        <div class="text-center text-xs">
+    <footer class="mt-10 text-sm text-center border-t border-fuchsia-400 py-6 space-y-6">
+      <Show when={localStorage.getItem("LekkiRunsUser")}>
+        <div class="text-center text-sm">
           You're logged in as{" "}
           <b class="text-blue-600">
-            {JSON.parse(localStorage.getItem("lagRunsUser")).nickname}
+            {JSON.parse(localStorage.getItem("LekkiRunsUser")).nickname}
           </b>
         </div>
       </Show>
       <div class="space-y-3">
         <div class="space-x-3">
-          <Show when={localStorage.getItem("lagRunsUser")}>
+          <Show when={localStorage.getItem("LekkiRunsUser")}>
             <span
               onClick={() => {
                 logOut();
@@ -31,7 +31,8 @@ function Footer() {
             <span>-</span>
             <Show
               when={
-                JSON.parse(localStorage.getItem("lagRunsUser")).role === "admin"
+                JSON.parse(localStorage.getItem("LekkiRunsUser")).role ===
+                "admin"
               }
             >
               <>
@@ -43,7 +44,11 @@ function Footer() {
             </Show>
           </Show>
           <A href="#" class="text-gray-600 hover:opacity-60">
-            Ts & Cs
+            Terms & Conditions
+          </A>{" "}
+          <span>-</span>
+          <A href="#" class="text-gray-600 hover:opacity-60">
+            Safety Concerns
           </A>
         </div>
         <div>&copy; 2024. All rights reserved.</div>

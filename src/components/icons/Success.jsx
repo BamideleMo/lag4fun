@@ -8,7 +8,7 @@ export default function Success() {
       >
         <span class="">👍🏿</span>
       </div>
-      <div class="text-center text-green-600 text-lg uppercase">Success!</div>
+      <div class="text-center text-green-600 text-lg uppercase pt-2">Yayy!</div>
     </>
   );
 }
