@@ -265,7 +265,7 @@ function Home() {
                               lady.username +
                               "?text=Hi%20" +
                               lady.nickname +
-                              ".%20Found%20your%20contact%20on%20LekkiRuns."
+                              ".%20Found%20your%20contact%20on%20LekkiRuns.com"
                             }
                             class="lady cursor-pointer block p-2 border border-slate-600 
                           rounded-md bg-white hover:bg-blue-50"

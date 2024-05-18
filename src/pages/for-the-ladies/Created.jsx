@@ -24,8 +24,11 @@ function Created() {
           <div class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border">
             <p>Your account was successfully created. </p>
             <p>
-              <A href="/a/login" class="text-red-600 hover:underline">
-                Click HERE to Log In
+              <A
+                href="/a/login"
+                class="text-red-600 hover:underline font-semibold"
+              >
+                Click HERE to log in
               </A>{" "}
               now to see/complete your profile.
             </p>
