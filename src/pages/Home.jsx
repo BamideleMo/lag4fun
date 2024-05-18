@@ -24,6 +24,7 @@ function Home() {
   const [countLadies, setCountLadies] = createSignal();
   const [orientation, setOrientation] = createSignal("all");
   const [build, setBuild] = createSignal("any");
+  const [isSorting, setIsSorting] = createSignal(false);
 
   const [ladiesData, setLadiesData] = createStore([]);
 
@@ -37,6 +38,7 @@ function Home() {
   const submit = async (event) => {
     event.preventDefault();
     setIsProcessing(true);
+    setIsSorting(true);
 
     setOrientation(formData().orientation);
     setBuild(formData().built);
@@ -44,7 +46,13 @@ function Home() {
     fetchLadies();
     setIsProcessing(false);
     setFilter(false);
+
+    setTimeout(myGreeting, 2000);
   };
+
+  function myGreeting() {
+    setIsSorting(false);
+  }
 
   const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -190,7 +198,8 @@ function Home() {
             class="roboto-bold w-full md:w-9/12 lg:w-8/12 mx-auto text-center drop-shadow-lg 
           leading-tight text-2xl sm:text-4xl lg:text-4xl"
           >
-            A Simple List of Ladies in <span class="border-b-2 border-blue-600">Lekki</span>{" "}
+            A Simple List of Ladies in{" "}
+            <span class="border-b-2 border-blue-600">Lekki</span>{" "}
             <span class="border-b-2 border-fuchsia-600">
               Available to Mingle
             </span>
@@ -198,106 +207,109 @@ function Home() {
           </h2>
         </section>
         <div class="pt-8 text-sm lg:text-base drop-shadow-lg mx-auto space-y-4">
-          <div class="flex space-x-2">
-            <div
-              onClick={() => {
-                showFilter();
-              }}
-              class="cursor-pointer hover:opacity-60 bg-fuchsia-100 border border-fuchsia-600 
-              rounded-lg py-1 px-4 flex items-center font-bold"
-            >
-              <div class="h-fit w-fit mx-auto">
-                <span class="block text-xs text-center">Filter</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="text-gray-600 leading-tight md:pt-2 text-sm">
-              <span class="text-gray-400">Showing:</span>
-              <br />
-              <b class="capitalize">
-                {countLadies()} {orientation() === "all" ? "" : orientation()}
-              </b>{" "}
-              <b class="capitalize">
-                {build() === "any" ? "" : "& " + build()}
-              </b>{" "}
-              {orientation() !== "all" && countLadies() === 1
-                ? "Lady"
-                : "Ladies"}{" "}
-              in <b class="capitalize">Lekki</b>. Just tap on profile for direct
-              WhatsApp chat.
-            </div>
-          </div>
           <Show
             fallback={
-              <Show
-                when={countLadies() === 0}
-                fallback={
-                  <div class="space-y-4 drop-shadow-lg">
-                    <For each={data().ladiesData}>
-                      {(lady, i) => (
-                        <a
-                          href={
-                            "https://wa.me/" +
-                            lady.username +
-                            "?text=Hi%20" +
-                            lady.nickname +
-                            ".%20Found%20your%20contact%20on%20LekkiRuns."
-                          }
-                          class="lady cursor-pointer block p-2 border border-slate-600 
-                          rounded-md bg-white hover:bg-blue-50"
-                        >
-                          <div class="flex justify-between border-b pb-1 mb-2">
-                            <div class="roboto-bold text-blue-600">
-                              {lady.nickname}
-                            </div>
-                            <div>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1.5}
-                                stroke="currentColor"
-                                className="w-5 h-5 text-red-600"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                          <div
-                            class="text-slate-600 leading-tight"
-                            innerHTML={lady.bio}
-                          ></div>
-                        </a>
-                      )}
-                    </For>
+              <>
+                <div class="flex space-x-2">
+                  <div
+                    onClick={() => {
+                      showFilter();
+                    }}
+                    class="cursor-pointer hover:opacity-60 bg-fuchsia-100 border border-fuchsia-600 
+              rounded-lg py-1 px-4 flex items-center font-bold"
+                  >
+                    <div class="h-fit w-fit mx-auto">
+                      <span class="block text-xs text-center">Filter</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6 mx-auto"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                }
-              >
-                <div class="block p-2 border border-black rounded-lg bg-yellow-50">
-                  <b>Oops!</b>
-                  <br />
-                  No result found. Try other filter options.
+                  <div class="text-gray-600 leading-tight md:pt-2 text-sm">
+                    <span class="text-gray-400">Showing:</span>
+                    <br />
+                    <b class="capitalize">
+                      {countLadies()}{" "}
+                      {orientation() === "all" ? "" : orientation()}
+                    </b>{" "}
+                    <b class="capitalize">
+                      {build() === "any" ? "" : "& " + build()}
+                    </b>{" "}
+                    {orientation() !== "all" && countLadies() === 1
+                      ? "Lady"
+                      : "Ladies"}{" "}
+                    in <b class="capitalize">Lekki</b>. Just tap on profile for
+                    direct WhatsApp chat.
+                  </div>
                 </div>
-              </Show>
+                <Show
+                  when={countLadies() === 0}
+                  fallback={
+                    <div class="space-y-4 drop-shadow-lg">
+                      <For each={data().ladiesData}>
+                        {(lady, i) => (
+                          <a
+                            href={
+                              "https://wa.me/" +
+                              lady.username +
+                              "?text=Hi%20" +
+                              lady.nickname +
+                              ".%20Found%20your%20contact%20on%20LekkiRuns."
+                            }
+                            class="lady cursor-pointer block p-2 border border-slate-600 
+                          rounded-md bg-white hover:bg-blue-50"
+                          >
+                            <div class="flex justify-between border-b pb-1 mb-2">
+                              <div class="roboto-bold text-blue-600">
+                                {lady.nickname}
+                              </div>
+                              <div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  strokeWidth={1.5}
+                                  stroke="currentColor"
+                                  className="w-5 h-5 text-red-600"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <div
+                              class="text-slate-600 leading-tight"
+                              innerHTML={lady.bio}
+                            ></div>
+                          </a>
+                        )}
+                      </For>
+                    </div>
+                  }
+                >
+                  <div class="block p-2 border border-black rounded-lg bg-yellow-50">
+                    <b>Oops!</b>
+                    <br />
+                    No result found. Try other filter options.
+                  </div>
+                </Show>
+              </>
             }
-            when={data.loading}
+            when={data.loading || isSorting()}
           >
             <Loading />
           </Show>
