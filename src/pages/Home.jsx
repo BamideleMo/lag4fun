@@ -209,13 +209,13 @@ function Home() {
           </h2>
         </section>
 
-        <a
+        {/* <a
           href="#top"
           class="bottom-4 right-4 opacity-60 fixed z-50 bg-black p-3 text-xs text-center text-white font-semibold"
         >
           <p>&uarr;</p>
           <p>Go to Top</p>
-        </a>
+        </a> */}
         <div class="pt-8 text-sm lg:text-base drop-shadow-lg mx-auto space-y-4">
           <Show
             fallback={
