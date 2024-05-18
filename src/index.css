@@ -17,3 +17,10 @@ body {
   font-style: normal;
 }
 
+.lady br{
+  content: "";
+  margin: 2.5em;
+  display: block;
+  font-size: 24%;
+}
+

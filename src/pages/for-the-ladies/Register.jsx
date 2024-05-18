@@ -11,30 +11,41 @@ import { zodSchema } from "solid-form-handler/zod";
 import { z } from "zod";
 import { useNavigate } from "@solidjs/router";
 
-const schema = z.object({
-  username: z.string().length(11, "*Invalid"),
-  password: z.string().min(1, "*Invalid"),
-});
+const schema = z
+  .object({
+    nickname: z.string().min(1, "*Invalid"),
+    username: z.string().length(11, "*Invalid"),
+    password: z.string().min(1, "*Invalid"),
+    confirm_password: z.string().min(1, "*Invalid"),
+  })
+  .refine(
+    (values) => {
+      return values.password === values.confirm_password;
+    },
+    {
+      message: "*Mismatch",
+      path: ["confirm_password"],
+    }
+  );
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
-function Login() {
+function Register() {
   const formHandler = useFormHandler(zodSchema(schema));
   const { formData } = formHandler;
-  const now = new Date();
 
   const navigate = useNavigate();
 
   const [isProcessing, setIsProcessing] = createSignal(false);
   const [message, setMessage] = createSignal("");
-  const [data, setData] = createSignal("");
 
   const submit = async (event) => {
     event.preventDefault();
     setIsProcessing(true);
+
     try {
       //Call API here:
-      const response = await fetch(VITE_API_URL + "/auth/login", {
+      const response = await fetch(VITE_API_URL + "/auth/register", {
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
@@ -42,8 +53,11 @@ function Login() {
         },
         method: "POST",
         body: JSON.stringify({
+          nickname: formData().nickname,
           username: formData().username,
           password: formData().password,
+          user_role: "lady",
+          status: "awaiting validation",
         }),
       });
       const result = await response.json();
@@ -51,18 +65,7 @@ function Login() {
         setMessage(result.response);
         setIsProcessing(false);
       } else {
-        var store = {
-          custom_id: result.response.custom_id,
-          role: result.response.role,
-          nickname: result.response.nickname,
-          username: result.response.username,
-          token: result.response.token,
-          expiry: now.getTime() + 10800000,
-        };
-        setData(store);
-        localStorage.setItem("LekkiRunsUser", JSON.stringify(data()));
-
-        navigate("/a/profile");
+        navigate("/a/created", { replace: true });
       }
     } catch (error) {
       console.error(error);
@@ -70,18 +73,32 @@ function Login() {
   };
   return (
     <MetaProvider>
-      <Title>Log in - LekkiRuns.ng</Title>
+      <Title>Register - LekkiRuns.ng</Title>
       <Link rel="canonical" href="https://LekkiRuns.ng/" />
-      <Meta name="description" content="Log in to access your account." />
+      <Meta name="description" content="Create your LekkiRuns account." />
       <div class="w-full p-3 lg:w-8/12 lg:mx-auto">
         <Header />
         <section class="pt-8">
-          <h2 class="text-center roboto-bold">Log in</h2>
+          <h2 class="text-center roboto-bold">Create Account</h2>
           <form
             autocomplete="off"
             onSubmit={submit}
             class="my-2 w-80 mx-auto p-4 bg-gray-50 space-y-4 drop-shadow-lg text-sm rounded-lg border"
           >
+            <div class="text-gray-400">
+              Attract men who like what you like and are looking for someone
+              like you!
+            </div>
+            <div>
+              <TextInput
+                label="Nickname:"
+                name="nickname"
+                required={true}
+                type="text"
+                placeholder="What should we call you?"
+                formHandler={formHandler}
+              />
+            </div>
             <div>
               <TextInput
                 label="WhatsApp Number:"
@@ -100,17 +117,15 @@ function Login() {
                 passId="pass1"
                 formHandler={formHandler}
               />
-              <div class="text-right pt-2">
-                Forgot Password?{" "}
-                <a
-                  href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LekkiRuns%20Code.%20Help%20me%20get%20it."
-                  target="_blank"
-                  class="text-fuchsia-600 hover:opacity-60"
-                >
-                  Click here
-                </a>
-                .
-              </div>
+            </div>
+            <div>
+              <PasswordInput
+                label="Confirm Password:"
+                name="confirm_password"
+                required={true}
+                passId="pass2"
+                formHandler={formHandler}
+              />
             </div>
 
             <Show when={message() !== ""}>
@@ -118,7 +133,6 @@ function Login() {
                 {message()}
               </div>
             </Show>
-
             <div>
               <Show
                 when={formHandler.isFormInvalid()}
@@ -131,7 +145,7 @@ function Login() {
                           type="submit"
                           class="bg-slate-900 text-white w-full p-3 rounded-lg hover:opacity-60"
                         >
-                          Log in
+                          Submit
                         </button>
                       }
                     >
@@ -149,16 +163,16 @@ function Login() {
                   disabled
                   class="cursor-not-allowed opacity-60 bg-slate-900 text-white w-full p-3 rounded-lg"
                 >
-                  Log in
+                  Submit
                 </button>
               </Show>
             </div>
             <div class="text-center">
-              Don't have an account yet? <br />
-              <A href="/a/register" class="text-fuchsia-600 hover:opacity-60">
+              Account already exist? <br />
+              <A href="/a/login" class="text-fuchsia-600 hover:opacity-60">
                 Click here
               </A>{" "}
-              to create it.
+              to log in.
             </div>
           </form>
         </section>
@@ -168,4 +182,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

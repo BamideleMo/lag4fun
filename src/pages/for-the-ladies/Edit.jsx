@@ -24,7 +24,7 @@ function Edit() {
   };
   return (
     <MetaProvider>
-      <Title>Edit My Profile - LagRuns</Title>
+      <Title>Edit My Profile - LekkiRuns</Title>
       <Meta
         name="description"
         content="Attract men who like what you like and are looking for someone like you using your profile!"
@@ -42,10 +42,10 @@ function Edit() {
               <p class="border-t border-yellow-600 pt-2">
                 <b>Note:</b>
                 <br />
-                You need your <b>LagRuns code</b> to edit your profile.
+                You need your <b>LekkiRuns code</b> to edit your profile.
                 Forgotten yours?{" "}
                 <a
-                  href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LagRuns%20Code.%20Help%20me%20get%20it."
+                  href="https://wa.me/2347036935026?text=Hello.%20I%20forgot%20my%20LekkiRuns%20Code.%20Help%20me%20get%20it."
                   target="_blank"
                   class="underline hover:opacity-60"
                 >
@@ -66,7 +66,7 @@ function Edit() {
             </div>
             <div>
               <TextInput
-                label="LagRuns Code:"
+                label="LekkiRuns Code:"
                 name="code"
                 required={true}
                 type="text"

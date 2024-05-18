@@ -6,14 +6,16 @@ import "./index.css";
 import Home from "./pages/Home";
 import Post from "./pages/for-the-ladies/Post";
 import AdminPost from "./pages/admin/Post";
-import Remove from "./pages/for-the-ladies/Remove";
 import Edit from "./pages/for-the-ladies/Edit";
-import List from "./pages/List";
-import CreateGetCode from "./pages/admin/CreateGetCode";
 import Faqs from "./pages/Faqs";
-import HowTo from "./pages/for-the-ladies/HowTo";
-import GetCode from "./pages/for-the-ladies/GetCode";
 import Login from "./pages/for-the-ladies/Login";
+import Register from "./pages/for-the-ladies/Register";
+import Created from "./pages/for-the-ladies/Created";
+import Validation from "./pages/for-the-ladies/Validation";
+import ValidationLink from "./pages/for-the-ladies/ValidationLink";
+import Success from "./pages/for-the-ladies/Success";
+import Profile from "./pages/for-the-ladies/Profile";
+import Tips from "./pages/for-the-ladies/Tips";
 
 const root = document.getElementById("root");
 
@@ -35,15 +37,17 @@ render(
     <Router>
       <Route path="/" component={Home} />
       <Route path="/admin/post" component={AdminPost} />
-      <Route path="/admin/coder" component={CreateGetCode} />
       <Route path="/a/post" component={Post} />
-      <Route path="/a/remove" component={Remove} />
       <Route path="/a/edit" component={Edit} />
-      <Route path="/l" component={List} />
       <Route path="/faqs" component={Faqs} />
-      <Route path="/a/how-to" component={HowTo} />
-      <Route path="/a/get-code" component={GetCode} />
       <Route path="/a/login" component={Login} />
+      <Route path="/a/register" component={Register} />
+      <Route path="/a/created" component={Created} />
+      <Route path="/a/validation" component={Validation} />
+      <Route path="/a/validation/link" component={ValidationLink} />
+      <Route path="/a/success" component={Success} />
+      <Route path="/a/profile" component={Profile} />
+      <Route path="/a/tips" component={Tips} />
     </Router>
   ),
   root

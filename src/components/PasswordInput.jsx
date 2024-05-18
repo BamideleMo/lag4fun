@@ -44,7 +44,7 @@ export default function PasswordInput(props) {
             </div>
             <div>
               <Show when={field.helpers.error}>
-                <div class="text-purple-600">{field.helpers.errorMessage}</div>
+                <div class="text-red-600">{field.helpers.errorMessage}</div>
               </Show>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function PasswordInput(props) {
                 }}
                 type="password"
                 id={props.passId}
-                class="text-slate-600 w-full block border border-black outline-none bg-white px-1 h-10 placeholder:text-gray-200"
+                class="text-slate-600 w-full border border-black outline-none bg-white px-1 h-10"
               />
             </div>
             <div class="w-8 bg-black border border-black text-center pt-1.5">
@@ -68,7 +68,7 @@ export default function PasswordInput(props) {
                 onClick={() => {
                   togglePass(props.passId);
                 }}
-                class="w-6 h-6 inline cursor-pointer text-blue-200 hover:text-blue-600"
+                class="w-6 h-6 inline cursor-pointer text-blue-200 hover:text-white"
               >
                 <Show
                   when={crossEye()}

@@ -18,9 +18,7 @@ const schema = z.object({
 
 function Header() {
   const formHandler = useFormHandler(zodSchema(schema));
-  const { formData } = formHandler;
   const [form, setForm] = createSignal(false);
-  const [whichForm, setWhichForm] = createSignal("login");
 
   const showForm = () => {
     setForm(true);
@@ -53,52 +51,19 @@ function Header() {
             <div class="p-4 space-y-4 flex flex-col">
               {/* <div class="space-y-2"> */}
               <A
-                href="/a/get-code"
-                class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-              >
-                <span>Get LagRuns Code</span>
-                <span class="text-2xl leading-none -mt-0.5">🔑</span>
-              </A>
-              <A
                 href="/a/login"
                 class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
               >
                 <span>Log In</span>
+                <span class="text-2xl leading-none -mt-0.5">🔑</span>
+              </A>
+              <A
+                href="/a/register"
+                class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
+              >
+                <span>Create Profile</span>
                 <span class="text-2xl leading-none -mt-0.5">😍</span>
               </A>
-              {/* </div> */}
-              {/* <div class="space-y-2 border-y border-fuchsia-400 py-4">
-                <A
-                  href="/a/post"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Post My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">😍</span>
-                </A>
-                <A
-                  href="/a/edit"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Edit My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">🥰</span>
-                </A>
-                <A
-                  href="/a/remove"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Remove My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">😡</span>
-                </A>
-              </div>
-              <div>
-                <A
-                  href="/a/boost"
-                  class="flex border border-gray-200 p-3 bg-gray-100 justify-between rounded-lg hover:opacity-60"
-                >
-                  <span>Boost My Profile</span>
-                  <span class="text-2xl leading-none -mt-0.5">🚀</span>
-                </A>
-              </div> */}
             </div>
           </div>
         </div>
@@ -107,16 +72,35 @@ function Header() {
         <A href="/" class="text-3xl w-10">
           <img src={logo} class="w-full inline -mt-2" />
         </A>
-        <div class="space-x-8 text-sm pt-2">
-          <A href="/faqs">FAQs</A>
-          <span
-            onClick={() => {
-              showForm();
-            }}
-            class="cursor-pointer bg-fuchsia-600 text-white p-2 rounded-lg hover:opacity-60"
+        <div class="space-x-8 text-sm pt-2 drop-shadow-lg">
+          <Show
+            when={localStorage.getItem("lagRunsUser")}
+            fallback={
+              <>
+                <A href="/faqs">FAQs</A>
+                <A href="/report">Report</A>
+                <span
+                  onClick={() => {
+                    showForm();
+                  }}
+                  class="cursor-pointer bg-fuchsia-600 text-white p-2 rounded-lg hover:opacity-60"
+                >
+                  For the Ladies
+                </span>
+              </>
+            }
           >
-            For the Ladies
-          </span>
+            <>
+              <A href="/a/tips">Quick Tips</A>
+              <A href="/a/profile">Edit Profile</A>
+              <A
+                href="/a/advertise"
+                class="bg-red-600 text-white rounded-lg p-2 hover:opacity-60"
+              >
+                Advertise
+              </A>
+            </>
+          </Show>
         </div>
       </header>
     </>
