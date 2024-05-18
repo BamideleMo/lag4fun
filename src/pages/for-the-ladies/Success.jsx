@@ -29,7 +29,8 @@ function Success() {
             <p>Action was successful.</p>
             <Show
               when={
-                JSON.parse(localStorage.getItem("LekkiRunsUser")).role === "lady"
+                JSON.parse(localStorage.getItem("LekkiRunsUser")).role ===
+                "lady"
               }
             >
               <div class="text-left border-t pt-2 space-y-2">
@@ -40,7 +41,10 @@ function Success() {
                 </p>
                 <p>Meanwhile...</p>
                 <p>
-                  <A href="/a/tips" class="text-red-600 hover:opacity-60">
+                  <A
+                    href="/a/tips"
+                    class="text-red-600 hover:opacity-60 font-semibold"
+                  >
                     Click here
                   </A>{" "}
                   for free tips on how to make more money, stay safe and stand

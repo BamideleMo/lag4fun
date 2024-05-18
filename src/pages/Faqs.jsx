@@ -34,7 +34,7 @@ function Faqs() {
         <Header />
         <section class="pt-8 sm:w-7/12 lg:w-6/12 mx-auto">
           <h2 class="text-center roboto-bold">FAQs</h2>
-          <div class="mt-1 space-y-8">
+          <div class="mt-1 space-y-6">
             <div class="bg-gray-100 border border-gray-200 p-4 rounded-lg">
               <div
                 onClick={() => {

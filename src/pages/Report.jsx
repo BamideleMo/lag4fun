@@ -13,6 +13,7 @@ import { z } from "zod";
 import { useNavigate } from "@solidjs/router";
 
 const schema = z.object({
+  phone: z.string().length(11, "*Invalid"),
   username: z.string().length(11, "*Invalid"),
   reason: z.string().min(1, "*Invalid"),
   details: z.string().min(1, "*Invalid").max(600, "*Invalid"),
@@ -47,6 +48,7 @@ function Report() {
           username: formData().username,
           reason: formData().reason,
           details: formData().details,
+          phone: formData().details,
         }),
       });
       const result = await response.json();
@@ -93,7 +95,17 @@ function Report() {
             </div>
             <div>
               <TextInput
-                label="WhatsApp Number:"
+                label="Your WhatsApp Number:"
+                name="phone"
+                required={true}
+                type="text"
+                placeholder="e.g.: 09065431244"
+                formHandler={formHandler}
+              />
+            </div>
+            <div>
+              <TextInput
+                label="Account's WhatsApp Number:"
                 name="username"
                 required={true}
                 type="text"
